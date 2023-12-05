@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7fb312d-0853-464d-9387-dfd54c143b2b" name="Changes" comment="view fsm assemble">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/GameViewState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/GameViewState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/InfoViewState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/InfoViewState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/IntroViewState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/IntroViewState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/LoadingViewState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/LoadingViewState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/MenuViewState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/MenuViewState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/ResultsViewState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/ResultsViewState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CentipedeUI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CentipedeUI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+    <list default="true" id="b7fb312d-0853-464d-9387-dfd54c143b2b" name="Changes" comment="fsm assemble in scene">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/FSM/ViewStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/FSM/ViewStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/GameViewState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/InfoViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/InfoViewState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/IntroViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/IntroViewState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MenuViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/MenuViewState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/ResultsViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ResultsViewState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +107,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701484173964</updated>
-      <workItem from="1701484175616" duration="3119000" />
+      <workItem from="1701484175616" duration="3234000" />
     </task>
     <task id="LOCAL-00001" summary="update gitignore">
       <option name="closed" value="true" />
@@ -133,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701748056723</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fsm assemble in scene">
+      <option name="closed" value="true" />
+      <created>1701748608987</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701748608987</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +157,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="update gitignore" />
     <MESSAGE value="view fsm assemble" />
-    <option name="LAST_COMMIT_MESSAGE" value="view fsm assemble" />
+    <MESSAGE value="fsm assemble in scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="fsm assemble in scene" />
   </component>
 </project>
