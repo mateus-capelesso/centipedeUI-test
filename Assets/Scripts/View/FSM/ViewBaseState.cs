@@ -11,9 +11,13 @@ namespace View
             _controller = controller;
         }
         public abstract void OnEnter();
-        public abstract void OnExit();
 
-        public virtual void RequestStateChange(ViewStates targetState)
+        public virtual void OnExit()
+        {
+            
+        }
+
+        protected virtual void RequestStateChange(ViewStates targetState)
         {
             _controller.RequestStateChange(targetState);
         }
