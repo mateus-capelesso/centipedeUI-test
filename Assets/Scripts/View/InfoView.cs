@@ -22,11 +22,13 @@ namespace View
         {
             animator.SetTrigger(enterTrigger);
             inputName.onSelect.AddListener(ClearInputField);
+            inputName.onEndEdit.AddListener(s =>
+            {
+                ContinueClicked();
+            });
             continueButton.onClick.AddListener(ContinueClicked);
         }
         
-        
-
         private void ContinueClicked()
         {
             if (string.IsNullOrEmpty(inputName.text))
@@ -50,6 +52,7 @@ namespace View
         public void ClearReferences()
         {
             inputName.onSelect.RemoveListener(ClearInputField);
+            inputName.onEndEdit.RemoveAllListeners();
             continueButton.onClick.RemoveListener(ContinueClicked);
         }
 

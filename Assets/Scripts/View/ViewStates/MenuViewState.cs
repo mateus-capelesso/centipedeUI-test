@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace View
@@ -19,6 +20,8 @@ namespace View
             startGameButton.onClick.AddListener(StartGameClicked);
             optionsButton.onClick.AddListener(OptionsClicked);
             exitGameButton.onClick.AddListener(ExitGameClicked);
+
+            EventSystem.current.SetSelectedGameObject(startGameButton.gameObject);
             
             view.EnterMainMenu();
         }
