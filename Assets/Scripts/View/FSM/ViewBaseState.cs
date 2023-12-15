@@ -6,7 +6,7 @@ namespace View
         private ViewStateMachine _controller;
         public ViewStates state;
 
-        public virtual void Initialize(ViewStateMachine controller)
+        public void Initialize(ViewStateMachine controller)
         {
             _controller = controller;
         }
@@ -16,8 +16,7 @@ namespace View
         {
             
         }
-
-        protected virtual void RequestStateChange(ViewStates targetState)
+        protected void RequestStateChange(ViewStates targetState)
         {
             _controller.RequestStateChange(targetState);
         }
