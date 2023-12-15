@@ -5,39 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fb312d-0853-464d-9387-dfd54c143b2b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/InfoView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/InfoView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/LoadingView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/LoadingView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/ToastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/ToastController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/GameView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/GameView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/ResultsView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/ResultsView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/ScoreParticle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/ScoreParticle.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CentipedeUI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CentipedeUI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimationClips/IntroConfirm.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimationClips/IntroConfirm.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimationClips/IntroEnter.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimationClips/IntroEnter.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimationClips/IntroPulse.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimationClips/IntroPulse.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animator/Intro CTA.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animator/Intro CTA.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animator/BackgroundAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Animator/BackgroundAnimator.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/SpaceGrotesk-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SpaceGrotesk-Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SpaceGrotesk-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SpaceGrotesk-Regular SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/GameViewState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameViewState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/GameViewState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/InfoViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/InfoViewState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/InfoViewState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/InfoViewState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/IntroViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/IntroViewState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/IntroViewState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/IntroViewState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/LoadingViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/LoadingViewState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/LoadingViewState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/LoadingViewState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MenuViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/MenuViewState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MenuViewState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/MenuViewState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/ResultsViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/ResultsViewState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/ResultsViewState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/ResultsViewState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MushroomField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MushroomField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/InfoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/InfoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/GameViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/GameViewState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/InfoViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/InfoViewState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/ResultsViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ViewStates/ResultsViewState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +120,9 @@
       <updated>1701484173964</updated>
       <workItem from="1701484175616" duration="3845000" />
       <workItem from="1701834236469" duration="3262000" />
-      <workItem from="1702522479149" duration="9015000" />
+      <workItem from="1702522479149" duration="12610000" />
+      <workItem from="1702595391072" duration="956000" />
+      <workItem from="1702607965439" duration="5224000" />
     </task>
     <task id="LOCAL-00001" summary="update gitignore">
       <option name="closed" value="true" />
@@ -178,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701838097860</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="assemble UI until game">
+      <option name="closed" value="true" />
+      <created>1702538348882</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702538348882</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +199,7 @@
     <MESSAGE value="fsm assemble in scene" />
     <MESSAGE value="code cleanup" />
     <MESSAGE value="intro assembly and animations" />
-    <option name="LAST_COMMIT_MESSAGE" value="intro assembly and animations" />
+    <MESSAGE value="assemble UI until game" />
+    <option name="LAST_COMMIT_MESSAGE" value="assemble UI until game" />
   </component>
 </project>

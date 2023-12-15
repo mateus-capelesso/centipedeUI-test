@@ -37,7 +37,7 @@ namespace View
                 return;
             }
             
-            OnNameTyped?.Invoke(inputName.text);
+            animator.SetTrigger(exitTrigger);
             StartCoroutine(WaitExitAnimation());
         }
 
@@ -55,8 +55,10 @@ namespace View
 
         private IEnumerator WaitExitAnimation()
         {
+            
             yield return new WaitForSecondsRealtime(0.5f);
-            animator.SetTrigger(exitTrigger);
+            
+            OnNameTyped?.Invoke(inputName.text);
             
         }
         

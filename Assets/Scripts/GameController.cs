@@ -8,9 +8,6 @@ public class GameController : MonoBehaviour
     GameObject mainMenu;
 
     [SerializeField]
-    GameObject gameplay;
-
-    [SerializeField]
     InputField nameField;
 
     [SerializeField, Header("Objects References")]
@@ -22,22 +19,21 @@ public class GameController : MonoBehaviour
     [SerializeField]
     GameObject player;
 
-    [SerializeField]
-    Result resultsScreen;
+    private string _playerName;
 
-    [SerializeField]
-    Text score_text;
+    public string PlayerName
+    {
+        get => _playerName;
+        set => _playerName = value;
+    }
+
+    public int Score
+    {
+        get => score;
+    }
+    
 
     int score;
-
-    void Start()
-    {
-        player.SetActive(false);
-        if (PlayerPrefs.HasKey("Name"))
-        {
-            nameField.text = PlayerPrefs.GetString("Name");
-        }
-    }
 
     void OnEnable()
     {
@@ -58,7 +54,6 @@ public class GameController : MonoBehaviour
         player.SetActive(true);
         _centipedeManager.SpawnCentipedes();
         mainMenu.SetActive(false);
-        gameplay.SetActive(true);
     }
 
     public void NextLevel()
@@ -72,20 +67,17 @@ public class GameController : MonoBehaviour
     void PlayerTouched()
     {
         GameOver(score);
+        
     }
 
     public void GameOver(int s)
     {
-        gameplay.SetActive(false);
         player.SetActive(false);
-        resultsScreen.gameObject.SetActive( true );
-        resultsScreen.SetScore(s);
     }
 
     public void SetScore(int i)
     {
         score += i;
-        score_text.text = score.ToString();
     }
 
     public void OnRetryPressed()

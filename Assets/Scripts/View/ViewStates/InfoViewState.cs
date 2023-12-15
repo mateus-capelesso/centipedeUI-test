@@ -6,9 +6,9 @@ namespace View
     {
 
         [SerializeField] private InfoView view;
+        [SerializeField] private GameController gameController;
         
         private string _playerName;
-        private const string NameKey = "playerName";
         
         public override void OnEnter()
         {
@@ -33,14 +33,20 @@ namespace View
         private void SavePlayerData(string playerName)
         {
             _playerName = playerName;
-            PlayerPrefs.SetString(NameKey, _playerName);
+            PlayerPrefs.SetString("playerName", _playerName);
+            PlayerPrefs.Save();
+
+            gameController.PlayerName = playerName;
+            
+            RequestStateChange(ViewStates.Game);
         }
 
         private bool CheckSaveData()
         {
-            if (PlayerPrefs.HasKey(NameKey))
+            if (PlayerPrefs.HasKey("playerName"))
             {
                 _playerName = PlayerPrefs.GetString("playerName");
+                gameController.PlayerName = _playerName;
                 return true;
             }
 

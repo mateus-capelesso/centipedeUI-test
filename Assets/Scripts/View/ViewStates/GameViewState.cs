@@ -6,12 +6,19 @@ namespace View
     public class GameViewState : ViewBaseState
     {
         [SerializeField] private GameController game;
-
+        [SerializeField] private GameView view;
+        
         [SerializeField] private List<GameObject> gameItems;
+
+        private string _playerName;
         public override void OnEnter()
         {
+            _playerName = game.PlayerName;
+            
             SignEvents();
             SetGameItems(true);
+            
+            view.SetPlayerName(_playerName);
             game.Play();
         }
 
@@ -32,37 +39,26 @@ namespace View
         {
             GameEvents.GameOverEvent += GameOver;
             GameEvents.NextLevel += LevelUp;
-            GameEvents.IncreaseScore += Score;
-            GameEvents.CentipedeHitEvent += CentipedeHit;
+            GameEvents.IncreaseScore += view.UpdateScore;
+            GameEvents.CentipedeHitEvent += view.ShowScoreParticle;
         }
 
         private void ReleaseEvents()
         {
             GameEvents.GameOverEvent -= GameOver;
             GameEvents.NextLevel -= LevelUp;
-            GameEvents.IncreaseScore -= Score;
-            GameEvents.CentipedeHitEvent -= CentipedeHit;
+            GameEvents.IncreaseScore -= view.UpdateScore;
+            GameEvents.CentipedeHitEvent -= view.ShowScoreParticle;
         }
 
         private void GameOver()
         {
-            
+            RequestStateChange(ViewStates.Results);
         }
 
         private void LevelUp()
         {
             
         }
-
-        private void Score(int score)
-        {
-            
-        }
-
-        private void CentipedeHit(Vector3 position)
-        {
-            
-        }
-        
     }
 }

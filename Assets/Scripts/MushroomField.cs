@@ -22,7 +22,7 @@ public class MushroomField : MonoBehaviour
 
         // define spawn area within viewport:
         var bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0.25f, Camera.main.nearClipPlane));
-        var topRight = Camera.main.ViewportToWorldPoint(new Vector3(1f, 1f, Camera.main.nearClipPlane));
+        var topRight = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.93f, Camera.main.nearClipPlane));
         fieldArea = new Rect(bottomLeft, topRight - bottomLeft);
     }
 
@@ -52,7 +52,7 @@ public class MushroomField : MonoBehaviour
         int retries = 0;
         do
         {
-            randomPosition = new Vector2( Random.Range(fieldArea.xMin, fieldArea.xMax), Random.Range(fieldArea.yMin, fieldArea.yMax));
+            randomPosition = new Vector2( Random.Range(fieldArea.xMin, fieldArea.xMax - 5), Random.Range(fieldArea.yMin, fieldArea.yMax));
             isOverlap = Physics2D.OverlapCircle(randomPosition, 0.5f, Physics2D.AllLayers) != null;
             retries++;
         } while (isOverlap && retries < maxSpawnRetries);

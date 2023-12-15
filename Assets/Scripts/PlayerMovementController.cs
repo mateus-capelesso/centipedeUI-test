@@ -16,7 +16,7 @@ public class PlayerMovementController : MonoBehaviour
 
         // get screen bounds
         var bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(_screenMargin, _screenMargin, Camera.main.nearClipPlane));
-        var topRight = Camera.main.ViewportToWorldPoint(new Vector3(1f - _screenMargin, 1f - _screenMargin, Camera.main.nearClipPlane));
+        var topRight = Camera.main.ViewportToWorldPoint(new Vector3(1f - _screenMargin, 0.93f - _screenMargin, Camera.main.nearClipPlane));
         _bounds = new Rect(bottomLeft, topRight - bottomLeft);
     }
 
