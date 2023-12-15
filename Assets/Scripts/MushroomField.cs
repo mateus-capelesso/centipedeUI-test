@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,6 +15,8 @@ public class MushroomField : MonoBehaviour
     const int additionalMushroomsPerLevel = 5;
 
     int _numMushrooms;
+
+    private List<GameObject> _mushrooms; 
     
     void Awake()
     {
@@ -31,17 +34,20 @@ public class MushroomField : MonoBehaviour
         GameEvents.CentipedeHitEvent -= OnCentipedeHit;
     }
 
-    void Start()
+    public void SpawnMushrooms()
     {
         SpawnMushrooms(_numMushrooms);
     }
 
     void SpawnMushrooms(int number)
     {
+        _mushrooms = new List<GameObject>();
+        
         for (int i = 0; i < number; i++)
         {
             var position = GetRandomPositionWithoutOverlap();
-            Instantiate(mushroom, position, Quaternion.identity, transform);
+            var obj = Instantiate(mushroom, position, Quaternion.identity, transform);
+            _mushrooms.Add(obj.gameObject);
         }
     }
 
@@ -75,5 +81,15 @@ public class MushroomField : MonoBehaviour
     {
         var obj = Instantiate(mushroom, pos, Quaternion.identity);
         obj.transform.parent = this.transform;
+    }
+
+    public void ResetMushrooms()
+    {
+        foreach (var mushroomObj in _mushrooms)
+        {
+            Destroy(mushroomObj);
+        }
+        
+        _mushrooms.Clear();
     }
 }

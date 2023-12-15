@@ -21,13 +21,18 @@ namespace View
 
         public void ExitMainMenu()
         {
-            StartCoroutine(TriggerAnimation(exitTrigger));
+            StartCoroutine(TriggerAnimation(exitTrigger, true));
         }
 
-        private IEnumerator TriggerAnimation(string trigger)
+        private IEnumerator TriggerAnimation(string trigger, bool reverse = false)
         {
+            var list = mainMenuAnimators;
+            if (reverse)
+            {
+                list.Reverse();
+            }
 
-            foreach (var animator in mainMenuAnimators)
+            foreach (var animator in list)
             {
                 animator.SetTrigger(trigger);
                 yield return new WaitForSeconds(delay);

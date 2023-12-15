@@ -20,6 +20,11 @@ public class PlayerMovementController : MonoBehaviour
         _bounds = new Rect(bottomLeft, topRight - bottomLeft);
     }
 
+    public void SetPlayerPositionToCenter()
+    {
+        transform.position = new Vector3(0f, 40f, 0f);
+    }
+
     void Update()
     {
         var inputDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));

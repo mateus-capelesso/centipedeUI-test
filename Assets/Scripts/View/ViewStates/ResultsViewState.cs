@@ -21,9 +21,7 @@ namespace View
 
         private void RetryClicked()
         {
-            
-            
-            
+            gameController.ResetGame();
             RequestStateChange(ViewStates.Loading);
         }
     }

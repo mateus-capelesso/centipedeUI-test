@@ -24,6 +24,7 @@ namespace View
 
         public override void OnExit()
         {
+            SetGameItems(false);
             ReleaseEvents();
         }
 

@@ -1,25 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField, Header("Canvas Elements")]
-    GameObject mainMenu;
 
-    [SerializeField]
-    InputField nameField;
-
-    [SerializeField, Header("Objects References")]
-    CentipedeManager _centipedeManager;
-
-    [SerializeField]
-    MushroomField field;
-
-    [SerializeField]
-    GameObject player;
+    [SerializeField, Header("Objects References")] CentipedeManager centipedeManager;
+    [SerializeField] private MushroomField field;
+    [SerializeField] private PlayerMovementController player;
 
     private string _playerName;
+    int _score;
 
     public string PlayerName
     {
@@ -29,12 +21,9 @@ public class GameController : MonoBehaviour
 
     public int Score
     {
-        get => score;
+        get => _score;
     }
     
-
-    int score;
-
     void OnEnable()
     {
         GameEvents.GameOverEvent += PlayerTouched;
@@ -51,38 +40,38 @@ public class GameController : MonoBehaviour
 
     public void Play()
     {
-        player.SetActive(true);
-        _centipedeManager.SpawnCentipedes();
-        mainMenu.SetActive(false);
+        player.gameObject.SetActive(true);
+        player.SetPlayerPositionToCenter();
+        centipedeManager.SpawnCentipedes();
+        field.SpawnMushrooms();
     }
 
     public void NextLevel()
     {
-        _centipedeManager.UpdateDifficulty();
+        centipedeManager.UpdateDifficulty();
         field.UpdateDifficulty();
 
-        _centipedeManager.SpawnCentipedes();
+        centipedeManager.SpawnCentipedes();
     }
 
     void PlayerTouched()
     {
-        GameOver(score);
-        
+        GameOver(_score);
     }
 
     public void GameOver(int s)
     {
-        player.SetActive(false);
+        player.gameObject.SetActive(false);
     }
 
     public void SetScore(int i)
     {
-        score += i;
+        _score += i;
     }
 
-    public void OnRetryPressed()
+    public void ResetGame()
     {
-        // Don't bother resetting everything carefully, just reload!
-        SceneManager.LoadScene(0);
+        centipedeManager.DeleteCentipede();
+        field.ResetMushrooms();
     }
 }

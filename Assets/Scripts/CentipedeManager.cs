@@ -10,6 +10,8 @@ public class CentipedeManager : MonoBehaviour
     [SerializeField]
     CentipedeSegment centipedeSegmentPrefab;
 
+    [SerializeField] private Transform centipedeParent;
+
     const int startingSegmentsInGame = 10;
     const float startingSpeedInGame = 70f;
     const int segmentsToAddPerLevel = 3;
@@ -34,6 +36,11 @@ public class CentipedeManager : MonoBehaviour
 
     public void SpawnCentipedes()
     {
+        _spawnedCentipedes = new List<Centipede>();
+        _pooledCentipedes = new Stack<Centipede>();
+        _spawnedSegments = new List<CentipedeSegment>();
+        _pooledSegments = new Stack<CentipedeSegment>();
+        
         NumSegmentsRemainingInGame = _numSegmentsInGame;
 
         int minCentipedes = Mathf.CeilToInt((float)_numSegmentsInGame / (float)maxSegmentsPerSpawnedCentipede);
@@ -72,7 +79,7 @@ public class CentipedeManager : MonoBehaviour
 
         if (!_pooledCentipedes.TryPop(out centipede))
         {
-            centipede = Instantiate(centipedePrefab);
+            centipede = Instantiate(centipedePrefab, centipedeParent);
         }
 
         _spawnedCentipedes.Add(centipede);
@@ -85,7 +92,7 @@ public class CentipedeManager : MonoBehaviour
 
         if (!_pooledSegments.TryPop(out segment))
         {
-            segment = Instantiate(centipedeSegmentPrefab);
+            segment = Instantiate(centipedeSegmentPrefab, centipedeParent);
         }
 
         _spawnedSegments.Add(segment);
@@ -96,5 +103,18 @@ public class CentipedeManager : MonoBehaviour
     {
         _currentSpeed *= speedMultiplierPerLevel;
         _numSegmentsInGame += segmentsToAddPerLevel;
+    }
+
+    public void DeleteCentipede()
+    {
+        for (int child = 0; child < centipedeParent.childCount; child++)
+        {
+            Destroy(centipedeParent.GetChild(child).gameObject);
+        }
+        
+        _spawnedCentipedes.Clear();
+        _pooledCentipedes.Clear();
+        _spawnedSegments.Clear();
+        _pooledSegments.Clear();
     }
 }
